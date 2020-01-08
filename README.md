@@ -7,9 +7,9 @@ The FMS Decentraised Application(DApp) on Ethereum Platform is a File Management
 
 INSTRUCTIONS FOR SETTING-UP APPLICATION Requirements:
 
-    - [X] NodeJs 
-    - [X] Truffle 
-    - [X] Ganache GUI
+- [X] NodeJs 
+- [X] Truffle 
+- [X] Ganache GUI
 
 
 
