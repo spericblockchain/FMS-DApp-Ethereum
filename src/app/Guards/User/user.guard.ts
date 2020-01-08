@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core'
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router'
+import { Observable } from 'rxjs'
 import { Web3Model } from 'src/app/Models/web3.model'
 import { Web3Service } from 'src/app/Services/Web3/web3.service'
 
@@ -24,7 +24,7 @@ export class UserGuard implements CanActivate {
     if ( localStorage.getItem( 'isLogged') ) {
       return true
     } else {
-      alert("There is no Ethereum connection")
+      alert('There is no Ethereum connection')
       this.route.navigateByUrl( '/' )
     }
   }

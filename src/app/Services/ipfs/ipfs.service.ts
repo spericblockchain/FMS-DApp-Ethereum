@@ -22,6 +22,7 @@ export class IpfsService {
       const cid = await this.node.add( data )
       return this.IPFSstop( cid[ 0 ].hash )
     } catch ( error ) {
+      return error;
     }
   }
   IPFSget = async ( cid: any ) => {
@@ -31,7 +32,7 @@ export class IpfsService {
         const receviedData = await this.node.cat( cid )
         resolve( await this.IPFSstop( receviedData.toString() ) )
       } catch ( error ) {
-        // resolve( await this.IPFSget( cid ) )
+        reject(error)
       }
     } )
   }
